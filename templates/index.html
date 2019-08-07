@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block content %}
+
+<p class='text'>
+    <font size="24" color="green" face="Frostbitten Wanker">HAIR STYLE CHANGING</font>
+    <style>
+        .text {
+        text-align:  center;
+   }
+  </style>
+</p>
+
+<div>
+
+    <div class="image-section" id="imageSection">
+        <div class="img-preview">
+            <img id="imagePreview" src="/static/img/img_6.png" height
+="256" width="256">
+            </img>
+        </div>
+
+        <div class="img-predict">
+            <img id="imagePredict" src="/static/img/img_7.png" height
+="256" width="256">
+            </img>
+        </div>
+        <div>
+            <button type="button" class="button-predict" id="buttonPredict" onclick="predictImage(event)">Predict!</button>
+        </div>
+        <div>
+            <div class="loader" id="load"></div>
+        </div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Choose...
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg" onchange="openFile(event)">
+        </form>
+        <div id="color-picker" class="cp-default">
+            <div class="picker-wrapper">
+            <div id="picker" class="picker"></div>
+            <div id="picker-indicator" class="picker-indicator"></div>
+        </div>
+        <div class="pcr-wrapper">
+            <div id="pcr" class="pcr"></div>
+            <div id="pcr-indicator" class="pcr-indicator"></div>
+         </div>
+        <ul id="color-values">
+            <li><label>RGB:</label><span id="rgb"></span></li>
+            <li><div id="pcr_bg"></div></li>
+        </ul>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

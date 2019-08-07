@@ -1,0 +1,4 @@
+#class r g b 
+background 0 0 255
+face 0 255 0
+hair 255 0 0
