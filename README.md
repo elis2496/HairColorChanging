@@ -1,1 +1,4 @@
-# -Hair_Color_Changing
+--------------------
+### Run
+
+```python app.py```
